@@ -1,6 +1,10 @@
 const offerBlock = document.querySelector('.header__offer-block');
-const closeButton = document.querySelector('.header__close-button');
+const offerBtn = document.querySelector('.header__close-button');
 
-closeButton.addEventListener('click', function() {
-    offerBlock.style.display = 'none';
+offerBtn.addEventListener('click', () => {
+	if (offerBlock instanceof HTMLDivElement) {
+		offerBlock.style.minHeight = '0px';
+		offerBlock.style.height = '0px';
+	}
 });
+
